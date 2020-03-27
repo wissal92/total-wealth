@@ -46,6 +46,14 @@ function updateDOM(providedData = data) {
     });
 }
 
+function doubleMoney(){
+    data = data.map(item => {
+        return {...item, money: item.money * 2}
+    });
+
+    updateDOM()
+}
 
 // Event listeners
 addUserBtn.addEventListener('click', getRandomUser);
+doubleBtn.addEventListener('click', doubleMoney);
